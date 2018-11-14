@@ -1,0 +1,43 @@
+#!/bin/bash
+
+# iwlist wlan0 scan | grep SSID | sort -u  | grep "SSID" | sed -re "s/^.*SSID:\"(.*)\"$/\\1/g" > /tmp/wlan-scan
+
+LIST=`cat /tmp/wlan-scan | while read a ; do echo -n "\"$a\" \"$a\" "; done`
+
+eval dialog --output-fd 3 --no-tags --menu \"WLAN Networks\" 0 0 0 $LIST  3> /tmp/wlan-selected
+
+if [ ! -s /tmp/wlan-selected ]; then
+    echo 
+    echo "No network chosen"
+    exit
+fi
+
+SSID=`cat /tmp/wlan-selected`
+
+PWD=$( dialog --insecure --passwordbox "Password for $SSID" 0 0 --output-fd 1)
+
+SECRET=`echo $PWD | wpa_passphrase $SSID | grep "	psk=" | cut -d "=" -f 2- `
+
+if [ -n "$SECRET"  ]; then
+    
+    echo
+    echo
+    echo "Writing the wlan0 config file to /etc/network/interfaces.d/"
+
+    (
+	echo "iface wlan0 inet dhcp"
+	echo "	wpa-ssid $SSID"
+	echo "	wpa-psk $SECRET"
+    ) > /etc/network/interfaces.d/wlan
+
+    echo "restarting interface"
+    ifdown wlan0
+    ifup wlan0
+    sleep 5
+else
+    echo "NO Secret Generated"
+    sleep 5
+fi
+
+
+
