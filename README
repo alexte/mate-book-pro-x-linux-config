@@ -10,3 +10,12 @@ made shutdown-alex suid root group alex for unpriveliged user "alex"
 	chgrp alex /sbin/shutdown-alex
 	chmod 4750 /sbin/shutdown-alex
 
+X11 Keybinding Features:
+	"WINDOW"-"Shift"-"Q"	Shutdown
+	"WINDOW"-"X"		Xterm
+	"WINDOW"-"W"		Webbrowser
+	"Powerbutton"		Suspend
+
+	Also working: brighter, darker, louder, quieter, mute
+
+
