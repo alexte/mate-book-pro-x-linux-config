@@ -9,4 +9,5 @@ collect:
 	cp /home/alex/.config/openbox/* home/alex/.config/openbox/.
 	cp /home/alex/.xbindkeysrc home/alex/.
 	cp /home/alex/choose-wlan-network home/alex/.
+	cp /etc/modprobe.d/blacklist.conf etc/modprobe.d/.
 

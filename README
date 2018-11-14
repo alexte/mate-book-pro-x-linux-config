@@ -19,3 +19,6 @@ X11 Keybinding Features:
 	Also working: brighter, darker, louder, quieter, mute
 
 
+Modules:
+	added nouveou to blacklist due to silent kernel panics in the modules
+		(I don't use nvidia feature actually)
