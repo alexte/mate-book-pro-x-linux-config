@@ -1,0 +1,22 @@
+
+"xbacklight -steps 1 -dec 10"
+    XF86MonBrightnessDown
+
+"xbacklight -steps 1 -inc 10"
+    XF86MonBrightnessUp
+
+"amixer -q set Speaker Playback Volume toggle"
+    XF86AudioMute
+
+"amixer -q set Speaker Playback Volume 1db+"
+    XF86AudioRaiseVolume
+
+"amixer -q set Speaker Playback Volume 1db-"
+    XF86AudioLowerVolume
+
+"xterm -sb"
+    m:0x40 + c:53
+
+"x-www-browser"
+    m:0x40 + c:25
+
