@@ -20,3 +20,6 @@
 "x-www-browser"
     m:0x40 + c:25
 
+"/sbin/shutdown-alex -P -h now"
+    Shift+Mod4 + q
+

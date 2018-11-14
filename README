@@ -5,3 +5,8 @@ Debian 9.5 Setup
 	debian 9.5 installer crashed: debian testing installed, to debian 9.5 downgrade
 
 
+made shutdown-alex suid root group alex for unpriveliged user "alex"
+	cp /sbin/shutdown /sbin/shutdown-alex
+	chgrp alex /sbin/shutdown-alex
+	chmod 4750 /sbin/shutdown-alex
+
