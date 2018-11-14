@@ -1,0 +1,10 @@
+#!/bin/bash
+
+  logger LIDCLOSE
+
+(
+  xauth merge /var/lib/xdm/authdir/authfiles/*
+  xbacklight -d ":0" -set 0
+  echo GO
+) >> /tmp/lidlog 2>&1
+

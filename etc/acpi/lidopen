@@ -1,0 +1,8 @@
+#!/bin/bash
+
+  logger LIDOPEN
+
+  xauth merge /var/lib/xdm/authdir/authfiles/*
+  xbacklight -d ":0" -set 60
+
+

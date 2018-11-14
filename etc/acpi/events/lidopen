@@ -1,0 +1,4 @@
+
+event=button/lid LID open
+action=/etc/acpi/lidopen
+
