@@ -1,0 +1,32 @@
+#!/bin/bash
+
+while true; do
+
+    size=`xwininfo -root  | egrep "Width|Height" | cut -d ":" -f 2 | ( read x; read y; echo $x"x"$y )`  
+
+    (
+	echo
+	banner `date +%H:%M`
+	echo
+        echo "------- Battery"
+        acpi | cut -d ":" -f 2- | tr "," "\n"
+        echo
+        echo "------- Temp"
+        sensors coretemp-isa-0000 | grep "°"
+        echo
+        echo "------- WLAN"
+        /sbin/iwconfig wlan0
+        echo
+        echo "------- IP"
+        /sbin/ifconfig
+        /sbin/route -n
+    ) | convert  -background transparent -stroke transparent -fill gray  \
+		-font "Noto-Mono" -display ":0" \
+		label:@- \
+		-gravity northwest -extent "$size" /tmp/backdrop.png
+
+    xloadimage -onroot /tmp/backdrop.png >/dev/null 2>&1
+    sleep 10
+done
+
+
