@@ -1,6 +1,8 @@
 #!/bin/bash
 
-# iwlist wlan0 scan | grep SSID | sort -u  | grep "SSID" | sed -re "s/^.*SSID:\"(.*)\"$/\\1/g" > /tmp/wlan-scan
+ifconfig wlan0 up
+sleep 1
+iwlist wlan0 scan | grep SSID | sort -u  | grep "SSID" | sed -re "s/^.*SSID:\"(.*)\"$/\\1/g" > /tmp/wlan-scan
 
 LIST=`cat /tmp/wlan-scan | while read a ; do echo -n "\"$a\" \"$a\" "; done`
 
@@ -9,6 +11,7 @@ eval dialog --output-fd 3 --no-tags --menu \"WLAN Networks\" 0 0 0 $LIST  3> /tm
 if [ ! -s /tmp/wlan-selected ]; then
     echo 
     echo "No network chosen"
+    sleep 5
     exit
 fi
 
