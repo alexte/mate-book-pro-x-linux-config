@@ -22,3 +22,9 @@ X11 Keybinding Features:
 Modules:
 	added nouveou to blacklist due to silent kernel panics in the modules
 		(I don't use nvidia feature actually)
+
+FAN Control:
+	Sensors does not detect fann speeds.
+	Notebook controls the fan automatically. 
+	Fan starts at 48°C, and gets louder at 62°C
+
