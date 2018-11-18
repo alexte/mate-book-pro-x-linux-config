@@ -12,6 +12,9 @@
   <item label="Web browser">
     <action name="Execute"><execute>x-www-browser</execute></action>
   </item>
+  <item label="Lock Screen">
+    <action name="Execute"><execute>xscreensaver-command -lock</execute></action>
+  </item>
   <item label="WLAN Chooser">
     <action name="Execute"><execute>xterm -e "su - root -c /home/alex/choose-wlan-network"</execute></action>
   </item>

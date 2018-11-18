@@ -5,4 +5,5 @@
   xauth merge /var/lib/xdm/authdir/authfiles/*
   xbacklight -d ":0" -set 60
 
+  rm /etc/lid_is_closed
 

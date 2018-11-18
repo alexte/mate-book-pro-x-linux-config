@@ -23,3 +23,6 @@
 "/sbin/shutdown-alex -P -h now"
     Shift+Mod4 + q
 
+"xscreensaver-command -lock"
+    m:0x40 + c:46
+

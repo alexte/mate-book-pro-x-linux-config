@@ -4,7 +4,8 @@ all:
 
 collect:
 	cp /etc/X11/xorg.conf etc/X11/.
-	cp /etc/rc.local etc/rc.local
+	cp /etc/rc.local etc/.
+	cp /etc/crontab etc/.
 	cp -r /etc/acpi/* etc/acpi/.
 	cp /home/alex/.xsession home/alex/.
 	cp /home/alex/.config/openbox/* home/alex/.config/openbox/.
