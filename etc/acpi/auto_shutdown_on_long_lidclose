@@ -4,7 +4,6 @@
 if test -e /etc/lid_is_closed && 
    test $(( `date +%s` - `stat -c %Z /etc/lid_is_closed` )) -gt 1800 ; 
 then 
-    rm /etc/lid_is_closed
     pm-suspend
 fi
 ) > /tmp/auto_poweroff_log

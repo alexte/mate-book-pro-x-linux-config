@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# back from suspend, propably lid is open now
+rm /etc/lid_is_closed
+
+# prevent screensaver from starting immediately after resume ?
+# better not, ask the user for the password
+# xscreensaver-command -deativate
+
