@@ -14,4 +14,6 @@
 echo "Try to restart last wlan config in background."
 /usr/sbin/ifup wlan0 &
 
+rm /etc/lid_is_closed
+
 exit 0

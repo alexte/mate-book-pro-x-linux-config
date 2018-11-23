@@ -1,7 +1,9 @@
 #!/bin/bash
 
 # 3000x2000 is to much for 14", so scale the image
-xrandr --output eDP1 --scale 0.6x0.6
+#xrandr --output eDP1 --scale 0.6x0.6
+# use new zoom script, that remembers last status
+/home/alex/zoom
 
 # change scrolling to Natural Scrolling on the Touchbad
 xinput  set-prop "SYNA1D31:00 06CB:CD48 Touchpad" "libinput Natural Scrolling Enabled"  1

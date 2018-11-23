@@ -26,3 +26,9 @@
 "xscreensaver-command -lock"
     m:0x40 + c:46
 
+"/home/alex/zoom +"
+    m:0x40 + c:35
+
+"/home/alex/zoom -"
+    m:0x40 + c:61
+
