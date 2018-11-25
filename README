@@ -1,10 +1,10 @@
 
 # About
 
-I bought a Huawei Mate Book Pro X 2018 (i5 8G). As I don't use W\*ndows 
+I bought a Huawei Mate Book Pro X 2018 (i5 8G). As I don't use W*ndows 
 and don't like to be controlled by an OS, but instead controll my Computers
-I installed Debian on day one. As I don't like W\*ndows I don't like OSes
-that try be as "user friendly" as W\*indows, I don't use systemd, gnome, aso.
+I installed Debian on day one. As I don't like W*ndows I don't like OSes
+that try be as "user friendly" as W*indows, I don't use systemd, gnome, aso.
 
 So this setup starts with a minimal Debian9, then I add X11, an xterm, a 
 window manger and a browser. Nothing more is needed the way I work.
