@@ -1,27 +1,74 @@
 
-Configs and Howtos for Debian on Huawei Mate Book Pro X Core i5
+# About
+
+I bought a Huawei Mate Book Pro X 2018 (i5 8G). As I don't use W\*ndows 
+and don't like to be controlled by an OS, but instead controll my Computers
+I installed Debian on day one. As I don't like W\*ndows I don't like OSes
+that try be as "user friendly" as W\*indows, I don't use systemd, gnome, aso.
+
+So this setup starts with a minimal Debian9, then I add X11, an xterm, a 
+window manger and a browser. Nothing more is needed the way I work.
+
+On the way there are some more packages to controll the computer. And some
+packages are not allowed.
+
+This repository is a collection of config files and scripts for a system
+I like to work with.
+
+# Setup
 
 Debian 9.5 Setup 
-	debian 9.5 installer crashed: debian testing installed, to debian 9.5 downgrade
+	debian 9.5 installer crashed: debian testing installed, then downgrade to  debian 9.5 
 
+Packages added:
+	xinput xrandr xscreensaver xdm acpi acpid openbox sysvinit-core chrome ...
+
+Packages removed:
+	sudo dbus systemd avahi-autoipd avahi
 
 made shutdown-alex suid root group alex for unpriveliged user "alex"
 	cp /sbin/shutdown /sbin/shutdown-alex
 	chgrp alex /sbin/shutdown-alex
 	chmod 4750 /sbin/shutdown-alex
 
+Modules:
+	added nouveou to blacklist due to silent kernel panics in the modules
+	(I don't use nvidia feature actually)
+
+# Usability Features
+
 X11 Keybinding Features:
 	"WINDOW"-"Shift"-"Q"	Shutdown
 	"WINDOW"-"X"		Xterm
 	"WINDOW"-"W"		Webbrowser
-	"Powerbutton"		Suspend
-
+	"WINDOW"-"L"		Lock Screen
+	"WINDOW"-"+"		Zoom X11
+	"WINDOW"-"-"		Zoom X11
 	Also working: brighter, darker, louder, quieter, mute
 
+ACPI Features:
+	"Powerbutton"		Suspend
+	"Lidclose"		Backlight off, Shutdown after 30 minutes
+	"Lidopen"		Backlight On
 
-Modules:
-	added nouveou to blacklist due to silent kernel panics in the modules
-		(I don't use nvidia feature actually)
+Openbox Config
+	Mouse follow Focus
+	Click Border to Raise/Lower Window
+	Two Finger scroll through virtual desktops
+	Two Finger move windows to virtual desktops using borders
+
+X11 Config
+	Touchbad Natual Scrolling
+	
+X11 RootWindow
+	Status Information
+
+Network
+	WLAN Network Selector using ncurses
+	Automatic USB/LAN Adapter configuration
+	Disabled all Auto/Magic Discovery (avahi, 169.x.x.x, 
+
+# Hardware Information
 
 FAN Control:
 	Sensors does not detect fann speeds.
