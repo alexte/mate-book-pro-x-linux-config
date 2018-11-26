@@ -2,9 +2,9 @@
 # About
 
 I bought a Huawei Mate Book Pro X 2018 (i5 8G). As I don't use W*ndows 
-and don't like to be controlled by an OS, but instead controll my Computers
+and don't like to be controlled by an OS, but instead controll my computers,
 I installed Debian on day one. As I don't like W*ndows I don't like OSes
-that try be as "user friendly" as W*indows, I don't use systemd, gnome, aso.
+that try be as "user friendly" as W*indows, so I don't use systemd, gnome, ...
 
 So this setup starts with a minimal Debian9, then I add X11, an xterm, a 
 window manger and a browser. Nothing more is needed the way I work.
@@ -58,20 +58,20 @@ Openbox Config
 	Two Finger move windows to virtual desktops using borders
 
 X11 Config
-	Touchbad Natual Scrolling
+	Touchpad Natural Scrolling
 	
 X11 RootWindow
-	Status Information
+	Status Information "osd"
 
 Network
 	WLAN Network Selector using ncurses
 	Automatic USB/LAN Adapter configuration
-	Disabled all Auto/Magic Discovery (avahi, 169.x.x.x, 
+	Disabled all Auto/Magic Discovery (avahi, 169.x.x.x, ...)
 
 # Hardware Information
 
 FAN Control:
-	Sensors does not detect fann speeds.
+	"Sensors" does not detect fann speeds.
 	Notebook controls the fan automatically. 
 	Fan starts at 48°C, and gets louder at 62°C
 
