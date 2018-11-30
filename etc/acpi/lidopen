@@ -2,8 +2,17 @@
 
   logger LIDOPEN
 
-  xauth merge /var/lib/xdm/authdir/authfiles/*
-  xbacklight -d ":0" -set 60
-
   rm /etc/lid_is_closed
+
+  export DISPLAY=:0
+  xauth merge /var/lib/xdm/authdir/authfiles/*
+
+  # xbacklight -d ":0" -set 60
+
+  # should work to open login screen but does not
+  #   xscreensaver-command -deactivate
+
+  # workarround
+  xdotool key shift
+
 

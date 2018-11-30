@@ -2,7 +2,14 @@
 
   logger LIDCLOSE
 
-  xauth merge /var/lib/xdm/authdir/authfiles/*
-  xbacklight -d ":0" -set 0
-
   touch /etc/lid_is_closed
+
+  DISPLAY=:0
+  xauth merge /var/lib/xdm/authdir/authfiles/*
+
+  # dont just turn backlight off
+  #   xbacklight -d ":0" -set 0
+  # but lock screen
+  xscreensaver-command -lock
+
+
