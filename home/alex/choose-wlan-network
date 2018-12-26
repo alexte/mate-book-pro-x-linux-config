@@ -40,7 +40,20 @@ if [ -n "$SECRET"  ]; then
     echo -n "Hit Enter:"
     read
 else
-    echo "NO Secret Generated"
+    echo
+    echo "No SECRET ? Trying without encryption..."
+    echo "Writing the wlan0 config file to /etc/network/interfaces.d/"
+
+    (
+        echo "iface wlan0 inet dhcp"
+        echo "  wireless-essid $SSID"
+        echo "  wireless-mode managed"
+    ) > /etc/network/interfaces.d/wlan
+
+    echo "restarting interface"
+    ifdown wlan0
+    ifup wlan0
+
     echo -n "Hit Enter:"
     read
 fi
