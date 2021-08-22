@@ -8,10 +8,10 @@
 "amixer -q set Speaker Playback Volume toggle"
     XF86AudioMute
 
-"amixer -q set Speaker Playback Volume 1db+"
+"amixer -q set Master 1db+"
     XF86AudioRaiseVolume
 
-"amixer -q set Speaker Playback Volume 1db-"
+"amixer -q set Master 1db-"
     XF86AudioLowerVolume
 
 "xterm -sb"
